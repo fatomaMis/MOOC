@@ -1,0 +1,8 @@
+Hello world !!!
+
+uploaded_io = params[:form][:attachment]
+    file.open(Rails.root.join('public','uploads',uploaded_io.original_filename),'wb') do |file|
+      file.write(uploaded_io.read)
+
+
+    send_file Rails.root.join('public','uploads','lecture',@attachment.lecture.id)

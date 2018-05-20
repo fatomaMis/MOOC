@@ -1,0 +1,24 @@
+RUN PROJECT:-
+--------------
+1- git clone from github 
+2- cd MOOC/
+3- create mysql database with name "MOOC_development"
+4- run : rake db:migrate
+5- run : bundle install
+6- run : rake db:seed
+7- admin email : admin@example.com 
+   password : password
+
+
+GEMS USED:-
+-----------
+1-activeadmin
+2-devise
+3-carrierwave
+4-mini_magick
+5-make_flaggable >> for like ,unlike but not work
+6-acts_as_votable
+7-ckeditor_rails
+
+Ruby version : ruby 2.5.1p57
+Rails version : Rails 5.1.6

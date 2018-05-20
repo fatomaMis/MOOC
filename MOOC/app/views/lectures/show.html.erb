@@ -1,0 +1,24 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @lecture.content %>
+</p>
+
+<p>
+  <strong>Lecture:</strong>
+  <%= link_to File.basename(@lecture.attachment_url),  "/uploads/lecture/attachment/#{@lecture.id}/#{File.basename(@lecture.attachment_url)}" %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @lecture.course.title %>
+</p>
+
+<%= render 'comments/comment' %>
+
+<br><br>
+<%= link_to 'Spam', {:controller => :lectures, :action => :spam, :id => @lecture.id }%>
+<%= link_to 'Edit', edit_lecture_path(@lecture) %>
+<%= link_to 'Back', lectures_path %>
